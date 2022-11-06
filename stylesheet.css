@@ -46,14 +46,103 @@
   position: relative;
   width: 30rem;
   height: 40rem;
-  border: 1px solid white;
+  /* border: 1px solid white; */
 }
 
 .animation-box {
   position: relative;
   width: 30rem;
   height: 40rem;
-  border: 1px solid white;
+  /* border: 1px solid white; */
+}
+
+@keyframes turn {
+  from {
+    transform: rotate3d(0, 0, 0, 0);
+  }
+  to {
+    transform: rotate3d(1, 1, 0, 360deg);
+  }
+}
+
+.cube-container {
+  width: 400px;
+  height: 400px;
+  perspective: 500px;
+  position: relative;
+  top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cube {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: turn 15s linear infinite;
+}
+
+.face {
+  width: 200px;
+  height: 200px;
+  background: skyblue;
+  border: 2px solid black;
+  position: absolute;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter";
+  text-align: center;
+  font-size: 2rem;
+  transition: transform 500ms;
+  color: white;
+  box-shadow: 0px 0px 10px rgb(220, 31, 255);
+}
+
+.front {
+  transform: translateZ(100px);
+  background-color: rgb(220, 31, 255);
+  border: 2px solid rgb(220, 31, 255);
+}
+
+.back {
+  transform: translateZ(-100px) rotateY(180deg);
+  background-color: rgb(220, 31, 255);
+  border: 2px solid rgb(220, 31, 255);
+}
+
+.left {
+  transform: translateX(-100px) rotateY(-90deg);
+  background-color: rgb(220, 31, 255);
+  border: 2px solid rgb(220, 31, 255);
+}
+
+.right {
+  transform: translateX(100px) rotateY(90deg);
+  background-color: rgb(220, 31, 255);
+  border: 2px solid rgb(220, 31, 255);
+}
+
+.top {
+  transform: translateY(-100px) rotateX(90deg);
+  background-color: rgb(220, 31, 255);
+  border: 2px solid rgb(220, 31, 255);
+}
+
+.bottom {
+  transform: translateY(100px) rotateX(-90deg);
+  background-color: rgb(220, 31, 255);
+  border: 2px solid rgb(220, 31, 255);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cube {
+    animation: none;
+    transform: rotate3d(1, 1, 0, 45deg);
+  }
 }
 
 .purple {
@@ -79,6 +168,12 @@
 .fa-code {
   color: white;
   font-size: 3rem;
+  transition: 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.fa-code:hover {
+  color: rgb(220, 31, 255);
 }
 
 .brack0 {
@@ -89,6 +184,13 @@
   transform: rotate(-5deg);
 }
 
+.brack1 {
+  position: absolute;
+  left: -10rem;
+  top: 0rem;
+  color: rgb(177, 169, 169);
+  transform: rotate(10deg);
+}
 .brack1 {
   position: absolute;
   left: -10rem;
