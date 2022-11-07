@@ -17,10 +17,11 @@ nav {
   top: 0;
   width: 100%;
   height: 4rem;
-  /* background-color: green; */
+  background-color: black;
   z-index: 20;
   display: flex;
   justify-content: space-between;
+  border-radius: 0.5rem;
 }
 
 .navlist {
@@ -69,7 +70,7 @@ nav {
 }
 
 .logo {
-  padding-top: 0.5rem;
+  padding-top: 0.75rem;
   padding-left: 2rem;
   cursor: pointer;
 }
@@ -119,7 +120,7 @@ nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 2rem;
+  gap: 1.7rem;
 }
 
 .social {
@@ -131,8 +132,8 @@ nav {
 }
 .social:hover {
   color: white;
-  /* font-size: 2.75rem; */
   padding-bottom: 0.5rem;
+  text-shadow: 0px 0px 115px white;
 }
 
 .animation-box {
@@ -157,9 +158,11 @@ nav {
   perspective: 500px;
   position: relative;
   top: 3rem;
+  left: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border: 1px solid white; */
 }
 
 .cube {
@@ -168,6 +171,7 @@ nav {
   height: 200px;
   transform-style: preserve-3d;
   animation: turn 15s linear infinite;
+  background-color: rgb(220, 31, 255);
 }
 
 .face {
@@ -185,8 +189,9 @@ nav {
   font-size: 2rem;
   transition: transform 500ms;
   color: white;
-  box-shadow: 0px 0px 10px rgb(220, 31, 255);
+  box-shadow: 0px 0px 15px rgb(220, 31, 255);
   transition: 0.5s ease-in-out;
+  border-radius: 0.5rem;
 }
 
 .face:hover {
@@ -375,4 +380,48 @@ nav {
   width: 100%;
   height: 63rem;
   border-bottom: 1px solid red;
+}
+
+.cta-box {
+  position: absolute;
+  width: 100%;
+  /* border: 1px solid white; */
+  height: 4rem;
+  top: 42rem;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-button {
+  width: 9rem;
+  height: 100%;
+  background-color: rgb(6, 252, 178);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.inner-button {
+  position: relative;
+  left: -0.3rem;
+  top: -0.3rem;
+  width: 9rem;
+  height: 100%;
+  background-color: rgb(220, 31, 255);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+  font-family: "Inter";
+  font-size: 1.2rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.inner-button:hover {
+  /* color: rgb(6, 252, 178); */
+  left: -0rem;
+  top: -0rem;
 }
