@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script async src="script.js"></script>
     <link href="stylesheet.css" rel="stylesheet" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,12 +15,12 @@
   <body>
     <div class="app">
       <header>
-        <nav>
+        <nav id="navbar">
           <figure>
             <a href="index.html"><img src="./img/logo.png" class="logo" /></a>
           </figure>
           <ul class="navlist">
-            <li class="nav-li underline">Skills</li>
+            <a href="#skillbox" ><li class="nav-li underline">Skills</li></a>
             <li class="nav-li underline">Work</li>
             <li class="nav-li underline">About</li>
             <li class="nav-li underline">Contact</li>
@@ -86,15 +85,85 @@
             </div>
             <div class="cta-box">
               <div class="cta-button">
-                <div class="inner-button">Explore</div>
+                <a href="#skillbox"><div class="inner-button">Explore</div></a>
               </div>
             </div>
           </div>
-          <div class="blur-drop"></div>
+          <div class="blur-drop1"></div>
         </div>
       </header>
       <main>
-        <div class="skills-box"></div>
+        <div class="skills-box" id="skillbox">
+          <div class="blur-drop2"></div>
+          <div class="skills-inner">
+            <div class="skills-hero">
+              <h1 class="skills-herotext"><span class="purple">Front End</span> Development</h1>
+              <p class="skills-hero-sidetext">The <span class="green">right tool</span> gets the job done quicker.                          
+              </p>
+              <p class="skills-hero-sidetext2">I've developed applications using various technologies & tools including:               
+              </p>
+              <div class="list-container">
+                <ul class="skills-list-left">
+                  <li class="ico1">HTML5</li>
+                  <li class="ico2">CSS3</li>
+                  <li class="ico3">JavaScript</li>
+                  <li class="ico4">React.js</li>
+                  <li class="ico5">CLI</li>
+                  <li class="ico6">Git + GitHub</li>   
+                </ul>
+                <ul class="skills-list-right">
+                  <li class="ico7">Firebase</li>
+                  <li class="ico8">Netlify</li>
+                  <li class="ico9">Parcel</li>
+                  <li class="ico10">Node.js</li>
+                  <li class="ico11">NPM</li>
+                  <li class="ico12">Python3</li>
+                </ul>
+              </div>
+            </div>
+            <div class="skills-icons">
+              <div class="icon1 iconstyle hover-random2">
+                <img src="./img/icons8-firebase.svg" class="icon-img firebase">
+              </div>
+              <div class="icon2 iconstyle hover-random4">
+                <img src="./img/icons8-html-5.svg" class="icon-img html">
+              </div>
+              <div class="icon3 iconstyle hover-random3">
+                <img src="./img/icons8-css3.svg" class="icon-img css">
+              </div>
+              <div class="icon4 iconstyle hover-random3">
+                <img src="./img/icons8-javascript.svg" class="icon-img javascript">
+              </div>
+              <div class="icon5 iconstyle hover-random">
+                <img src="./img/icons8-react-40.svg" class="icon-img react">
+              </div>
+              <div class="icon6 iconstyle hover-random4">
+                <img src="./img/icons8-powershell.svg" class="icon-img powershell">
+              </div>
+              <div class="icon7 iconstyle hover-random">
+                <img src="./img/icons8-git.svg" class="icon-img git">
+              </div>
+              <div class="icon8 iconstyle hover-random4">
+                <img src="./img/icons8-github.svg" class="icon-img github">
+              </div>
+              <div class="icon9 iconstyle hover-random2">
+                <img src="./img/icons8-netlify-a-cloud-computing-company-that-offers-hosting-and-serverless-backend-services-for-static-websites.-48.png" class="icon-img netlify">
+              </div>
+              <div class="icon10 iconstyle hover-random">
+                <img src="./img/icons8-parcel-55.png" class="icon-img parcel">
+              </div>
+              <div class="icon11 iconstyle hover-random3">
+                <img src="./img/icons8-node-js.svg" class="icon-img nodejs">
+              </div>
+              <div class="icon12 iconstyle hover-random2">
+                <img src="./img/icons8-npm.svg" class="icon-img npm">
+              </div>
+              <div class="icon13 iconstyle hover-random3">
+                <img src="./img/icons8-python-94.png" class="icon-img python">
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
       <footer></footer>
     </div>

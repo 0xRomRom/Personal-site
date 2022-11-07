@@ -21,7 +21,7 @@ nav {
   z-index: 20;
   display: flex;
   justify-content: space-between;
-  border-radius: 0.5rem;
+  transition: top 0.3s;
 }
 
 .navlist {
@@ -30,12 +30,16 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 7rem;
+  gap: 5rem;
   list-style: none;
   /* border: 1px solid red; */
   display: inline-flex;
   margin-right: 5%;
   font-size: 1.2rem;
+}
+a {
+  color: white;
+  text-decoration: none;
 }
 
 .nav-li {
@@ -82,10 +86,22 @@ nav {
   border-bottom: 1px solid red;
 }
 
-.blur-drop {
+.blur-drop1 {
   position: absolute;
   left: 0rem;
   top: 10rem;
+  width: 800px;
+  height: 800px;
+  background-color: rgb(45, 184, 215);
+  opacity: 0.05;
+  border-radius: 20rem;
+  filter: blur(50px);
+}
+
+.blur-drop2 {
+  position: absolute;
+  left: 60%;
+  top: 70rem;
   width: 800px;
   height: 800px;
   background-color: rgb(45, 184, 215);
@@ -376,10 +392,34 @@ nav {
 }
 
 .skills-box {
-  background-color: green;
+  background-color: black;
   width: 100%;
   height: 63rem;
-  border-bottom: 1px solid red;
+}
+
+.skills-inner {
+  position: relative;
+  width: 100%;
+  height: 30rem;
+  /* border: 1px solid white; */
+  top: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills-hero {
+  position: relative;
+  height: 100%;
+  width: 30rem;
+  border: 1px solid red;
+}
+
+.skills-icons {
+  position: relative;
+  height: 100%;
+  width: 30rem;
+  border: 1px solid blue;
 }
 
 .cta-box {
@@ -421,7 +461,209 @@ nav {
 }
 
 .inner-button:hover {
-  /* color: rgb(6, 252, 178); */
   left: -0rem;
   top: -0rem;
+  box-shadow: 0px 0px 10px rgb(220, 31, 255);
+}
+
+.skills-herotext {
+  color: white;
+  font-family: "Inter";
+  font-size: 48px;
+}
+
+.skills-hero-sidetext {
+  padding-top: 1rem;
+  color: white;
+  font-family: "Inter";
+  font-size: 1.3rem;
+}
+
+.skills-hero-sidetext2 {
+  padding-top: 0.5rem;
+  color: white;
+  font-family: "Inter";
+  font-size: 1.3rem;
+}
+
+.skills-list-left {
+  color: white;
+  list-style: none;
+  font-family: "Inter";
+  font-size: 1.3rem;
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skills-list-right {
+  color: white;
+  list-style: none;
+  font-family: "Inter";
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.list-container {
+  margin-top: 2rem;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  height: 14rem;
+}
+
+.skills-list-left > li:hover {
+  color: rgb(220, 31, 255);
+  cursor: pointer;
+}
+
+.skills-list-right > li:hover {
+  color: rgb(220, 31, 255);
+  cursor: pointer;
+}
+
+.iconstyle {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 4rem;
+}
+
+.icon-img {
+  /* background-color: cyan; */
+  box-shadow: 0px 0px 15px cyan;
+  position: relative;
+  width: 3rem;
+  border-radius: 4rem;
+  padding: 0.25rem;
+  /* border: 1px solid red; */
+  transition: 0.2s ease-in-out;
+}
+
+.icon1 {
+  position: relative;
+  left: 2rem;
+  top: 3rem;
+}
+
+.icon2 {
+  position: relative;
+  left: 4rem;
+  top: 1rem;
+}
+
+.icon3 {
+  position: relative;
+  left: 4rem;
+  top: 6rem;
+}
+
+.icon4 {
+  position: relative;
+  left: 8rem;
+  top: 2rem;
+}
+
+.icon5 {
+  position: relative;
+  left: 4rem;
+  top: 14rem;
+}
+
+.icon6 {
+  position: relative;
+  left: -18rem;
+  top: 11rem;
+}
+
+.icon7 {
+  position: relative;
+  left: -2rem;
+  top: 7rem;
+}
+
+.icon8 {
+  position: relative;
+  left: 2rem;
+  top: 20rem;
+}
+
+.icon9 {
+  position: relative;
+  left: 15rem;
+  top: 20rem;
+}
+
+.icon10 {
+  position: relative;
+  left: -3rem;
+  top: 14rem;
+}
+
+.icon11 {
+  position: relative;
+  left: 2rem;
+  top: 16rem;
+}
+
+.icon12 {
+  position: relative;
+  left: -4rem;
+  top: 8rem;
+}
+
+.icon13 {
+  position: relative;
+  left: 4rem;
+  top: 16rem;
+}
+
+.hover-random {
+  animation: hoverRandom 4s ease-in-out forwards infinite;
+}
+
+.hover-random2 {
+  animation: hoverRandom 6s ease-in-out forwards infinite;
+}
+
+.hover-random3 {
+  animation: hoverRandom2 8s ease-in-out forwards infinite;
+}
+
+.hover-random4 {
+  animation: hoverRandom2 10s ease-in-out forwards infinite;
+}
+
+@keyframes hoverRandom {
+  0% {
+    position: relative;
+    transform: translateX(0.25rem);
+  }
+  50% {
+    position: relative;
+    transform: translateX(-0.25rem);
+  }
+  100% {
+    position: relative;
+    transform: translateX(0.25rem);
+  }
+}
+
+@keyframes hoverRandom2 {
+  0% {
+    position: relative;
+    transform: translateY(0.25rem);
+  }
+  50% {
+    position: relative;
+    transform: translateY(-0.25rem);
+  }
+  100% {
+    position: relative;
+    transform: translateY(0.25rem);
+  }
 }
