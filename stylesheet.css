@@ -83,7 +83,7 @@ a {
   background-color: black;
   width: 100%;
   height: 63rem;
-  border-bottom: 1px solid red;
+  /* border-bottom: 1px solid red; */
 }
 
 .blur-drop1 {
@@ -102,6 +102,18 @@ a {
   position: absolute;
   left: 60%;
   top: 70rem;
+  width: 800px;
+  height: 800px;
+  background-color: rgb(45, 184, 215);
+  opacity: 0.05;
+  border-radius: 20rem;
+  filter: blur(50px);
+}
+
+.blur-drop3 {
+  position: absolute;
+  left: 0rem;
+  top: 135rem;
   width: 800px;
   height: 800px;
   background-color: rgb(45, 184, 215);
@@ -395,6 +407,7 @@ a {
   background-color: black;
   width: 100%;
   height: 63rem;
+  border-bottom: 1px solid red;
 }
 
 .skills-inner {
@@ -402,7 +415,7 @@ a {
   width: 100%;
   height: 30rem;
   /* border: 1px solid white; */
-  top: 20rem;
+  top: 15rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -412,14 +425,14 @@ a {
   position: relative;
   height: 100%;
   width: 30rem;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .skills-icons {
   position: relative;
   height: 100%;
   width: 30rem;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
 .cta-box {
@@ -666,4 +679,22 @@ a {
     position: relative;
     transform: translateY(0.25rem);
   }
+}
+
+.cta-box2 {
+  position: relative;
+  width: 100%;
+  /* border: 1px solid white; */
+  height: 4rem;
+  top: 23rem;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+}
+
+.projects-box {
+  background-color: black;
+  width: 100%;
+  height: 63rem;
+  border-bottom: 1px solid red;
 }
