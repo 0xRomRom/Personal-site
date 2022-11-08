@@ -73,14 +73,31 @@ const b1 = document.querySelector(".b1");
 const b2 = document.querySelector(".b2");
 const b3 = document.querySelector(".b3");
 const b4 = document.querySelector(".b4");
+const u1 = document.querySelector(".u1");
+const u2 = document.querySelector(".u2");
+const u3 = document.querySelector(".u3");
+const u4 = document.querySelector(".u4");
 
 const mobileButtons = document.querySelectorAll(".mob-btn");
 
-const styleToggle = (white, btn1, btn2, btn3) => {
+const transitionHandler = (
+  white,
+  btn1,
+  btn2,
+  btn3,
+  upperVis,
+  upper1,
+  upper2,
+  upper3
+) => {
   white.classList.add("mob-white");
   btn1.classList.remove("mob-white");
   btn2.classList.remove("mob-white");
   btn3.classList.remove("mob-white");
+  upperVis.classList.remove("hidden");
+  upper1.classList.add("hidden");
+  upper2.classList.add("hidden");
+  upper3.classList.add("hidden");
 };
 
 b1.classList.add("mob-white");
@@ -88,10 +105,9 @@ b1.classList.add("mob-white");
 mobileButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
     const target = e.target.classList[1];
-    console.log(e.target.classList[1]);
-    target === "b1" ? styleToggle(b1, b2, b3, b4) : null;
-    target === "b2" ? styleToggle(b2, b1, b3, b4) : null;
-    target === "b3" ? styleToggle(b3, b1, b2, b4) : null;
-    target === "b4" ? styleToggle(b4, b1, b2, b3) : null;
+    target === "b1" ? transitionHandler(b1, b2, b3, b4, u1, u2, u3, u4) : null;
+    target === "b2" ? transitionHandler(b2, b1, b3, b4, u2, u1, u3, u4) : null;
+    target === "b3" ? transitionHandler(b3, b1, b2, b4, u3, u1, u2, u4) : null;
+    target === "b4" ? transitionHandler(b4, b1, b2, b3, u4, u1, u2, u3) : null;
   });
 });
