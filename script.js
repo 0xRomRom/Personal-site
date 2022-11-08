@@ -38,33 +38,60 @@ const removeStyle = (classInput, classInput2) => {
 };
 
 skillsList.addEventListener("mouseover", (e) => {
-  console.log(e.target.classList[0]);
-  e.target.classList[0] === "ico1" ? addStyle(html) : null;
-  e.target.classList[0] === "ico2" ? addStyle(css) : null;
-  e.target.classList[0] === "ico3" ? addStyle(javascript) : null;
-  e.target.classList[0] === "ico4" ? addStyle(react) : null;
-  e.target.classList[0] === "ico5" ? addStyle(cli) : null;
-  e.target.classList[0] === "ico6" ? addStyle(git, github) : null;
-  e.target.classList[0] === "ico7" ? addStyle(firebase) : null;
-  e.target.classList[0] === "ico8" ? addStyle(netlify) : null;
-  e.target.classList[0] === "ico9" ? addStyle(parcel) : null;
-  e.target.classList[0] === "ico10" ? addStyle(nodejs) : null;
-  e.target.classList[0] === "ico11" ? addStyle(npm) : null;
-  e.target.classList[0] === "ico12" ? addStyle(python) : null;
+  const target = e.target.classList[0];
+  target === "ico1" ? addStyle(html) : null;
+  target === "ico2" ? addStyle(css) : null;
+  target === "ico3" ? addStyle(javascript) : null;
+  target === "ico4" ? addStyle(react) : null;
+  target === "ico5" ? addStyle(cli) : null;
+  target === "ico6" ? addStyle(git, github) : null;
+  target === "ico7" ? addStyle(firebase) : null;
+  target === "ico8" ? addStyle(netlify) : null;
+  target === "ico9" ? addStyle(parcel) : null;
+  target === "ico10" ? addStyle(nodejs) : null;
+  target === "ico11" ? addStyle(npm) : null;
+  target === "ico12" ? addStyle(python) : null;
 });
 
 skillsList.addEventListener("mouseout", (e) => {
-  console.log(e.target.classList[0]);
-  e.target.classList[0] === "ico1" ? removeStyle(html) : null;
-  e.target.classList[0] === "ico2" ? removeStyle(css) : null;
-  e.target.classList[0] === "ico3" ? removeStyle(javascript) : null;
-  e.target.classList[0] === "ico4" ? removeStyle(react) : null;
-  e.target.classList[0] === "ico5" ? removeStyle(cli) : null;
-  e.target.classList[0] === "ico6" ? removeStyle(git, github) : null;
-  e.target.classList[0] === "ico7" ? removeStyle(firebase) : null;
-  e.target.classList[0] === "ico8" ? removeStyle(netlify) : null;
-  e.target.classList[0] === "ico9" ? removeStyle(parcel) : null;
-  e.target.classList[0] === "ico10" ? removeStyle(nodejs) : null;
-  e.target.classList[0] === "ico11" ? removeStyle(npm) : null;
-  e.target.classList[0] === "ico12" ? removeStyle(python) : null;
+  const target = e.target.classList[0];
+  target === "ico1" ? removeStyle(html) : null;
+  target === "ico2" ? removeStyle(css) : null;
+  target === "ico3" ? removeStyle(javascript) : null;
+  target === "ico4" ? removeStyle(react) : null;
+  target === "ico5" ? removeStyle(cli) : null;
+  target === "ico6" ? removeStyle(git, github) : null;
+  target === "ico7" ? removeStyle(firebase) : null;
+  target === "ico8" ? removeStyle(netlify) : null;
+  target === "ico9" ? removeStyle(parcel) : null;
+  target === "ico10" ? removeStyle(nodejs) : null;
+  target === "ico11" ? removeStyle(npm) : null;
+  target === "ico12" ? removeStyle(python) : null;
+});
+
+const b1 = document.querySelector(".b1");
+const b2 = document.querySelector(".b2");
+const b3 = document.querySelector(".b3");
+const b4 = document.querySelector(".b4");
+
+const mobileButtons = document.querySelectorAll(".mob-btn");
+
+const styleToggle = (white, btn1, btn2, btn3) => {
+  white.classList.add("mob-white");
+  btn1.classList.remove("mob-white");
+  btn2.classList.remove("mob-white");
+  btn3.classList.remove("mob-white");
+};
+
+b1.classList.add("mob-white");
+
+mobileButtons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const target = e.target.classList[1];
+    console.log(e.target.classList[1]);
+    target === "b1" ? styleToggle(b1, b2, b3, b4) : null;
+    target === "b2" ? styleToggle(b2, b1, b3, b4) : null;
+    target === "b3" ? styleToggle(b3, b1, b2, b4) : null;
+    target === "b4" ? styleToggle(b4, b1, b2, b3) : null;
+  });
 });
