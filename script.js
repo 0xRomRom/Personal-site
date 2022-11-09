@@ -190,6 +190,13 @@ const dot4 = document.querySelector(".sq4");
 const dot5 = document.querySelector(".sq5");
 const dot6 = document.querySelector(".sq6");
 
+const modal1 = document.querySelector(".m1");
+const modal2 = document.querySelector(".m2");
+const modal3 = document.querySelector(".m3");
+const modal4 = document.querySelector(".m4");
+const modal5 = document.querySelector(".m5");
+const modal6 = document.querySelector(".m6");
+
 const toggleStyle = (act, nac1, nac2, nac3, nac4, nac5) => {
   act.classList.add("circ-active");
   nac1.classList.remove("circ-active");
@@ -199,16 +206,43 @@ const toggleStyle = (act, nac1, nac2, nac3, nac4, nac5) => {
   nac5.classList.remove("circ-active");
 };
 
+const toggleModal = (act, nac1, nac2, nac3, nac4, nac5) => {
+  act.classList.remove("hidden");
+  nac1.classList.add("hidden");
+  nac2.classList.add("hidden");
+  nac3.classList.add("hidden");
+  nac4.classList.add("hidden");
+  nac5.classList.add("hidden");
+};
+
 const workToggleButtons = document.querySelectorAll(".fa-sq");
 
 workToggleButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
     const btn = e.target.classList[0];
-    btn === "sq1" ? toggleStyle(dot1, dot2, dot3, dot4, dot5, dot6) : null;
-    btn === "sq2" ? toggleStyle(dot2, dot1, dot3, dot4, dot5, dot6) : null;
-    btn === "sq3" ? toggleStyle(dot3, dot1, dot2, dot4, dot5, dot6) : null;
-    btn === "sq4" ? toggleStyle(dot4, dot1, dot2, dot3, dot5, dot6) : null;
-    btn === "sq5" ? toggleStyle(dot5, dot1, dot2, dot3, dot4, dot6) : null;
-    btn === "sq6" ? toggleStyle(dot6, dot1, dot2, dot3, dot4, dot5) : null;
+    if (btn === "sq1") {
+      toggleStyle(dot1, dot2, dot3, dot4, dot5, dot6);
+      toggleModal(modal1, modal2, modal3, modal4, modal5, modal6);
+    }
+    if (btn === "sq2") {
+      toggleStyle(dot2, dot1, dot3, dot4, dot5, dot6);
+      toggleModal(modal2, modal1, modal3, modal4, modal5, modal6);
+    }
+    if (btn === "sq3") {
+      toggleStyle(dot3, dot1, dot2, dot4, dot5, dot6);
+      toggleModal(modal3, modal1, modal2, modal4, modal5, modal6);
+    }
+    if (btn === "sq4") {
+      toggleStyle(dot4, dot1, dot2, dot3, dot5, dot6);
+      toggleModal(modal4, modal1, modal3, modal2, modal5, modal6);
+    }
+    if (btn === "sq5") {
+      toggleStyle(dot5, dot1, dot2, dot3, dot4, dot6);
+      toggleModal(modal5, modal1, modal3, modal4, modal2, modal6);
+    }
+    if (btn === "sq6") {
+      toggleStyle(dot6, dot1, dot2, dot3, dot4, dot5);
+      toggleModal(modal6, modal1, modal3, modal4, modal5, modal2);
+    }
   });
 });
