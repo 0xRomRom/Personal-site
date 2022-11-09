@@ -183,11 +183,32 @@ mobileButtons.forEach((button) => {
   });
 });
 
-// const text = document.querySelector(".projects-herotext");
-// const innerBox = document.querySelector(".projects-innerbox");
+const dot1 = document.querySelector(".sq1");
+const dot2 = document.querySelector(".sq2");
+const dot3 = document.querySelector(".sq3");
+const dot4 = document.querySelector(".sq4");
+const dot5 = document.querySelector(".sq5");
+const dot6 = document.querySelector(".sq6");
 
-// let padding = 0;
-// text.addEventListener("click", () => {
-//   padding += 300;
-//   innerBox.style.paddingLeft = `${padding}px`;
-// });
+const toggleStyle = (act, nac1, nac2, nac3, nac4, nac5) => {
+  act.classList.add("circ-active");
+  nac1.classList.remove("circ-active");
+  nac2.classList.remove("circ-active");
+  nac3.classList.remove("circ-active");
+  nac4.classList.remove("circ-active");
+  nac5.classList.remove("circ-active");
+};
+
+const workToggleButtons = document.querySelectorAll(".fa-sq");
+
+workToggleButtons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const btn = e.target.classList[0];
+    btn === "sq1" ? toggleStyle(dot1, dot2, dot3, dot4, dot5, dot6) : null;
+    btn === "sq2" ? toggleStyle(dot2, dot1, dot3, dot4, dot5, dot6) : null;
+    btn === "sq3" ? toggleStyle(dot3, dot1, dot2, dot4, dot5, dot6) : null;
+    btn === "sq4" ? toggleStyle(dot4, dot1, dot2, dot3, dot5, dot6) : null;
+    btn === "sq5" ? toggleStyle(dot5, dot1, dot2, dot3, dot4, dot6) : null;
+    btn === "sq6" ? toggleStyle(dot6, dot1, dot2, dot3, dot4, dot5) : null;
+  });
+});
