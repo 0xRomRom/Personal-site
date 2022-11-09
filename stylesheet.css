@@ -705,16 +705,27 @@ a {
   background-color: black;
   width: 100%;
   height: 63rem;
-  border-bottom: 1px solid red;
+  /* border-bottom: 1px solid red; */
+  overflow: hidden;
 }
 
 .projects-innerbox {
   position: relative;
-  width: 80vw;
-  height: 50rem;
+  width: 100%;
+  height: 55rem;
   border: 1px solid white;
-  left: 10vw;
   top: 10rem;
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  overflow-x: scroll;
+}
+
+.title-box {
+  position: relative;
+  width: 100%;
+  top: 7rem;
+  z-index: 300;
 }
 
 .projects-herotext {
@@ -722,14 +733,16 @@ a {
   font-family: "Inter";
   text-align: center;
   font-size: 48px;
+  position: relative;
+  z-index: 105;
 }
 
 .project-outer-modal {
   position: relative;
-  width: 21rem;
+  min-width: 21rem;
   height: 35rem;
-  left: 40rem;
-  top: 3rem;
+  /* left: 40rem; */
+  top: 6rem;
   /* border: 1px solid white; */
   border-radius: 1rem;
   overflow: hidden;
@@ -778,6 +791,51 @@ a {
     rgb(45, 45, 195)
   );
   animation: rotate 8s infinite linear;
+}
+
+.outer-bg2 {
+  position: absolute;
+  width: 400%;
+  height: 400%;
+  border: 1px solid red;
+  background: conic-gradient(
+    rgb(51, 189, 47),
+    rgb(29, 16, 27),
+    rgb(61, 175, 195),
+    rgb(248, 42, 11),
+    rgb(75, 75, 246)
+  );
+  animation: rotate 10s infinite linear;
+}
+
+.outer-bg3 {
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  border: 1px solid red;
+  background: conic-gradient(
+    rgb(28, 187, 244),
+    rgb(209, 227, 13),
+    rgb(241, 6, 225),
+    rgb(133, 102, 117),
+    rgb(163, 163, 210)
+  );
+  animation: rotate 12s infinite linear;
+}
+
+.outer-bg4 {
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  border: 1px solid red;
+  background: conic-gradient(
+    rgb(28, 187, 244),
+    rgb(209, 227, 13),
+    rgb(241, 6, 225),
+    rgb(133, 102, 117),
+    rgb(163, 163, 210)
+  );
+  animation: rotate 12s infinite linear;
 }
 
 @keyframes rotate {
@@ -957,4 +1015,32 @@ a {
 
 .tech-hov:hover {
   transform: scale(1.1);
+}
+
+.scale {
+  transform: scale(0.8);
+}
+
+.small {
+  font-size: 1.3rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dashspan {
+  position: absolute;
+  top: 18rem;
+}
+
+.sideflex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }

@@ -73,14 +73,39 @@ const b1 = document.querySelector(".b1");
 const b2 = document.querySelector(".b2");
 const b3 = document.querySelector(".b3");
 const b4 = document.querySelector(".b4");
+const b5 = document.querySelector(".b5");
+const b6 = document.querySelector(".b6");
+const b7 = document.querySelector(".b7");
+const b8 = document.querySelector(".b8");
+const b9 = document.querySelector(".b9");
+const b10 = document.querySelector(".b10");
+const b11 = document.querySelector(".b11");
+const b12 = document.querySelector(".b12");
+const b13 = document.querySelector(".b13");
+const b14 = document.querySelector(".b14");
+const b15 = document.querySelector(".b15");
+const b16 = document.querySelector(".b16");
+
 const u1 = document.querySelector(".u1");
 const u2 = document.querySelector(".u2");
 const u3 = document.querySelector(".u3");
 const u4 = document.querySelector(".u4");
+const u5 = document.querySelector(".u5");
+const u6 = document.querySelector(".u6");
+const u7 = document.querySelector(".u7");
+const u8 = document.querySelector(".u8");
+const u9 = document.querySelector(".u9");
+const u10 = document.querySelector(".u10");
+const u11 = document.querySelector(".u11");
+const u12 = document.querySelector(".u12");
+const u13 = document.querySelector(".u13");
+const u14 = document.querySelector(".u14");
+const u15 = document.querySelector(".u15");
+const u16 = document.querySelector(".u16");
 
 const mobileButtons = document.querySelectorAll(".mob-btn");
 
-const transitionHandler = (
+const transition = (
   white,
   btn1,
   btn2,
@@ -101,13 +126,40 @@ const transitionHandler = (
 };
 
 b1.classList.add("mob-white");
+b5.classList.add("mob-white");
+b9.classList.add("mob-white");
+b13.classList.add("mob-white");
 
 mobileButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
-    const target = e.target.classList[1];
-    target === "b1" ? transitionHandler(b1, b2, b3, b4, u1, u2, u3, u4) : null;
-    target === "b2" ? transitionHandler(b2, b1, b3, b4, u2, u1, u3, u4) : null;
-    target === "b3" ? transitionHandler(b3, b1, b2, b4, u3, u1, u2, u4) : null;
-    target === "b4" ? transitionHandler(b4, b1, b2, b3, u4, u1, u2, u3) : null;
+    const btn = e.target.classList[1];
+    btn === "b1" ? transition(b1, b2, b3, b4, u1, u2, u3, u4) : null;
+    btn === "b2" ? transition(b2, b1, b3, b4, u2, u1, u3, u4) : null;
+    btn === "b3" ? transition(b3, b1, b2, b4, u3, u1, u2, u4) : null;
+    btn === "b4" ? transition(b4, b1, b2, b3, u4, u1, u2, u3) : null;
+
+    btn === "b5" ? transition(b5, b6, b7, b8, u5, u6, u7, u8) : null;
+    btn === "b6" ? transition(b6, b5, b7, b8, u6, u5, u7, u8) : null;
+    btn === "b7" ? transition(b7, b5, b6, b8, u7, u5, u6, u8) : null;
+    btn === "b8" ? transition(b8, b5, b6, b7, u8, u5, u6, u7) : null;
+
+    btn === "b9" ? transition(b9, b10, b11, b12, u9, u10, u11, u12) : null;
+    btn === "b10" ? transition(b10, b9, b11, b12, u10, u9, u11, u12) : null;
+    btn === "b11" ? transition(b11, b9, b10, b12, u11, u9, u10, u12) : null;
+    btn === "b12" ? transition(b12, b9, b10, b11, u12, u9, u10, u11) : null;
+
+    btn === "b13" ? transition(b13, b14, b15, b16, u13, u14, u15, u16) : null;
+    btn === "b14" ? transition(b14, b13, b15, b16, u14, u13, u15, u16) : null;
+    btn === "b15" ? transition(b15, b13, b14, b16, u15, u13, u14, u16) : null;
+    btn === "b16" ? transition(b16, b13, b14, b15, u16, u13, u14, u15) : null;
   });
 });
+
+// const text = document.querySelector(".projects-herotext");
+// const innerBox = document.querySelector(".projects-innerbox");
+
+// let padding = 0;
+// text.addEventListener("click", () => {
+//   padding += 300;
+//   innerBox.style.paddingLeft = `${padding}px`;
+// });
