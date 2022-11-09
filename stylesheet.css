@@ -829,13 +829,13 @@ a {
   height: 300%;
   border: 1px solid red;
   background: conic-gradient(
-    rgb(28, 187, 244),
-    rgb(209, 227, 13),
-    rgb(241, 6, 225),
-    rgb(133, 102, 117),
-    rgb(163, 163, 210)
+    rgb(130, 206, 36),
+    rgb(51, 95, 190),
+    rgb(238, 34, 129),
+    rgb(12, 147, 209),
+    rgb(23, 215, 225)
   );
-  animation: rotate 12s infinite linear;
+  animation: rotate 14s infinite linear;
 }
 
 @keyframes rotate {

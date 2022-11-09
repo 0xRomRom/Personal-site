@@ -85,6 +85,14 @@ const b13 = document.querySelector(".b13");
 const b14 = document.querySelector(".b14");
 const b15 = document.querySelector(".b15");
 const b16 = document.querySelector(".b16");
+const b17 = document.querySelector(".b17");
+const b18 = document.querySelector(".b18");
+const b19 = document.querySelector(".b19");
+const b20 = document.querySelector(".b20");
+const b21 = document.querySelector(".b21");
+const b22 = document.querySelector(".b22");
+const b23 = document.querySelector(".b23");
+const b24 = document.querySelector(".b24");
 
 const u1 = document.querySelector(".u1");
 const u2 = document.querySelector(".u2");
@@ -102,6 +110,14 @@ const u13 = document.querySelector(".u13");
 const u14 = document.querySelector(".u14");
 const u15 = document.querySelector(".u15");
 const u16 = document.querySelector(".u16");
+const u17 = document.querySelector(".u17");
+const u18 = document.querySelector(".u18");
+const u19 = document.querySelector(".u19");
+const u20 = document.querySelector(".u20");
+const u21 = document.querySelector(".u21");
+const u22 = document.querySelector(".u22");
+const u23 = document.querySelector(".u23");
+const u24 = document.querySelector(".u24");
 
 const mobileButtons = document.querySelectorAll(".mob-btn");
 
@@ -129,6 +145,8 @@ b1.classList.add("mob-white");
 b5.classList.add("mob-white");
 b9.classList.add("mob-white");
 b13.classList.add("mob-white");
+b17.classList.add("mob-white");
+b21.classList.add("mob-white");
 
 mobileButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
@@ -152,6 +170,16 @@ mobileButtons.forEach((button) => {
     btn === "b14" ? transition(b14, b13, b15, b16, u14, u13, u15, u16) : null;
     btn === "b15" ? transition(b15, b13, b14, b16, u15, u13, u14, u16) : null;
     btn === "b16" ? transition(b16, b13, b14, b15, u16, u13, u14, u15) : null;
+
+    btn === "b17" ? transition(b17, b18, b19, b20, u17, u18, u19, u20) : null;
+    btn === "b18" ? transition(b18, b17, b19, b20, u18, u17, u19, u20) : null;
+    btn === "b19" ? transition(b19, b17, b18, b20, u19, u17, u18, u20) : null;
+    btn === "b20" ? transition(b20, b17, b18, b19, u20, u17, u18, u19) : null;
+
+    btn === "b21" ? transition(b21, b22, b23, b24, u21, u22, u23, u24) : null;
+    btn === "b22" ? transition(b22, b21, b23, b24, u22, u21, u23, u24) : null;
+    btn === "b23" ? transition(b23, b21, b22, b24, u23, u21, u22, u24) : null;
+    btn === "b24" ? transition(b24, b21, b22, b23, u24, u21, u22, u23) : null;
   });
 });
 
