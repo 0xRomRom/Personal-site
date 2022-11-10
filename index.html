@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <link href="stylesheet.css" rel="stylesheet" />
+    <!-- <link rel="icon" type="image/x-icon" href="/img/favicon.ico"> -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +15,7 @@
     <script defer src="./script.js"></script>
   </head>
   <body>
-    <div class="app">
+    <div class="app" id="top">
       <header>
         <nav id="navbar">
           <figure>
@@ -22,7 +24,7 @@
           <ul class="navlist">
             <a href="#tech" ><li class="nav-li underline">Skills</li></a>
             <a href="#mywork" ><li class="nav-li underline">My Work</li></a>
-            <li class="nav-li underline">About</li>
+            <li class="nav-li underline">About Me</li>
             <li class="nav-li underline">Contact</li>
           </ul>
         </nav>
@@ -453,10 +455,23 @@
               <button class="sq6 fa-sq"></button>
             </div>
           </div>
-          <div class="blur-drop3"></div>
+          <div class="blur-drop3 hover-bg"></div>
         </div>
       </main>
-      <footer></footer>
+      <footer>
+        <div class="aboutme">
+          <div class="about-innerbox">
+            <h1 class="about-herotext">About me</h1>
+            <div class="about-subtextbox">
+              <p class="about-subtext">Still here? <span class="green">Awesome!</span><br><br>Hey I'm Roman, nice to meet you.<br>Ever since I booted my first Windows 3.1 machine, I was intrigued by technology.<br><br>Having dreamed about creating my own programs, years went by as 'coding' was something that was out of my league. But dreams never fade.<br><br>My day job was not facing me with any more challenges, complexity or obstacles. I felt lost, I had to step it up.<br><br>I changed my mindset from is coding something I can do? To coding is something I can do. I have never looked back.<br><br>Every little project I developed, I proudly showed off to my relatives. I was in love.<br><br>Continuously seeking for that edge in my current skillset, my apps went from simple, poorly laid out projects, to responsive highly interactive applications.<br><br>I aspire to become a professional developer, that works alongside other bright minds on applications that impact the world.</p>
+            </div>
+          </div>
+          <div class="to-top-box">
+            <a href="#top"><i class="fa-solid fa-arrow-turn-up"></i></a>
+          </div>
+          <div class="blur-drop4 hover-bg"></div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
