@@ -246,3 +246,61 @@ workToggleButtons.forEach((button) => {
     }
   });
 });
+
+const dropshadow = document.querySelector(".dropshadow");
+const contactModal = document.querySelector(".contact-modal");
+const centerModal = document.querySelector(".center-modal");
+const closeContactModal = document.querySelector(".fa-circle-xmark");
+const openContactModal = document.querySelector(".contact-cta");
+
+dropshadow.addEventListener("click", () => {
+  dropshadow.classList.add("hidden");
+  contactModal.classList.add("hidden");
+});
+
+centerModal.addEventListener("click", (e) => {
+  const targ = e.target.classList[0];
+  if (
+    targ === "contact-modal" ||
+    targ === "contact-input" ||
+    targ === "reach-out" ||
+    targ === "email-input" ||
+    targ === "email-label" ||
+    targ === "submit-contact" ||
+    targ === "fa-solid"
+  ) {
+    return;
+  }
+  dropshadow.classList.add("hidden");
+  contactModal.classList.add("hidden");
+});
+
+closeContactModal.addEventListener("click", () => {
+  dropshadow.classList.add("hidden");
+  contactModal.classList.add("hidden");
+});
+
+openContactModal.addEventListener("click", () => {
+  dropshadow.classList.remove("hidden");
+  contactModal.classList.remove("hidden");
+});
+
+const submitFormButton = document.querySelector(".submit-contact");
+const messageText = document.querySelector(".contact-input");
+const emailInput = document.querySelector(".email-input");
+const pleaseMessage = document.querySelector(".please-message");
+
+submitFormButton.addEventListener("click", () => {
+  if (messageText.value.length === 0) {
+    pleaseMessage.classList.remove("hidden");
+    setTimeout(() => {
+      pleaseMessage.classList.add("hidden");
+    }, 3000);
+    return;
+  }
+  const userData = {
+    email: emailInput.value,
+    message: messageText.value,
+  };
+  console.log(userData);
+});
