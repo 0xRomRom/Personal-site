@@ -256,6 +256,7 @@ const openContactModal = document.querySelector(".contact-cta");
 dropshadow.addEventListener("click", () => {
   dropshadow.classList.add("hidden");
   contactModal.classList.add("hidden");
+  centerModal.classList.add("hidden");
 });
 
 centerModal.addEventListener("click", (e) => {
@@ -267,22 +268,26 @@ centerModal.addEventListener("click", (e) => {
     targ === "email-input" ||
     targ === "email-label" ||
     targ === "submit-contact" ||
-    targ === "fa-solid"
+    targ === "fa-solid" ||
+    targ === "please-message"
   ) {
     return;
   }
   dropshadow.classList.add("hidden");
   contactModal.classList.add("hidden");
+  centerModal.classList.add("hidden");
 });
 
 closeContactModal.addEventListener("click", () => {
   dropshadow.classList.add("hidden");
   contactModal.classList.add("hidden");
+  centerModal.classList.add("hidden");
 });
 
 openContactModal.addEventListener("click", () => {
   dropshadow.classList.remove("hidden");
   contactModal.classList.remove("hidden");
+  centerModal.classList.remove("hidden");
 });
 
 const submitFormButton = document.querySelector(".submit-contact");
@@ -304,3 +309,5 @@ submitFormButton.addEventListener("click", () => {
   };
   console.log(userData);
 });
+
+const submitFormHandler = () => {};
