@@ -8,6 +8,9 @@
   .brack1 {
     left: -5rem;
   }
+  .about-subtextbox {
+    width: 60%;
+  }
 }
 
 @media only screen and (max-width: 1150px) {
@@ -16,6 +19,10 @@
   }
   .brack1 {
     left: 2rem;
+  }
+  .about-subtextbox {
+    width: 90%;
+    left: 0%;
   }
 }
 
@@ -38,7 +45,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid white;
   }
   .hero-title {
     font-size: 40px;
@@ -60,7 +66,6 @@
     position: relative;
     width: 30rem;
     height: 25rem;
-    border: 1px solid white;
   }
 
   .cube-container {
@@ -81,9 +86,18 @@
     display: flex;
     justify-content: center;
   }
-
   .cta-box {
     top: 45rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .about-subtext {
+    font-size: 1rem;
+  }
+  .about-subtextbox {
+    border: 1px solid white;
+    height: auto;
   }
 }
 
@@ -111,10 +125,10 @@
     left: 88%;
   }
   .blur-drop1 {
-    left: -40rem;
+    top: -5rem;
+    left: -30rem;
   }
   .hero-title {
-    border: 1px solid white;
     left: 15%;
     top: 3rem;
   }
@@ -129,14 +143,20 @@
 
 @media only screen and (max-width: 450px) {
   .social {
-    color: rgb(161, 156, 156);
     font-size: 1.8rem;
-    cursor: pointer;
-    z-index: 50;
-    transition: 0.2s ease-in-out;
   }
   .cta-button {
     transform: scale(0.9);
+  }
+
+  .about-subtext {
+    font-size: 0.9rem;
+  }
+  .about-subtextbox {
+    border: 1px solid white;
+    height: auto;
+    width: 90%;
+    left: 5%;
   }
 }
 
@@ -148,5 +168,8 @@
   .hero-title {
     font-size: 35px;
     left: 22%;
+  }
+  .social {
+    font-size: 1.5rem;
   }
 }

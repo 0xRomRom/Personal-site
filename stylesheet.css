@@ -223,14 +223,14 @@ a {
   position: relative;
   width: 30rem;
   height: 40rem;
-  border: 1px solid white;
+  /* border: 1px solid white; */
 }
 
 .animation-box {
   position: relative;
   width: 30rem;
   height: 40rem;
-  border: 1px solid white;
+  /* border: 1px solid white; */
 }
 
 @keyframes turn {
@@ -470,14 +470,14 @@ a {
   background-color: black;
   width: 100%;
   height: 63rem;
-  /* border-bottom: 1px solid red; */
+  border-top: 1px solid red;
 }
 
 .skills-inner {
   position: relative;
   width: 100%;
   height: 30rem;
-  /* border: 1px solid white; */
+  border: 1px solid white;
   top: 15rem;
   display: flex;
   align-items: center;
@@ -488,7 +488,7 @@ a {
   position: relative;
   height: 100%;
   width: 30rem;
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 
 .skills-icons {
@@ -514,7 +514,7 @@ a {
   background-color: rgb(6, 252, 178);
   border-radius: 0.5rem;
   cursor: pointer;
-  z-index: 100;
+  z-index: 500 !important;
 }
 
 .inner-button {
@@ -1160,6 +1160,7 @@ a {
   height: 63rem;
   background-color: black;
   /* border-top: 1px solid white; */
+  overflow: hidden;
 }
 
 .about-innerbox {
@@ -1190,6 +1191,7 @@ a {
   color: white;
   font-family: "Inter";
   font-size: 1.3rem;
+  display: block;
 }
 
 .hover-bg {
