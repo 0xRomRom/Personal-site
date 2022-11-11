@@ -308,7 +308,6 @@ submitFormButton.addEventListener("click", () => {
     email: emailInput.value,
     message: messageText.value,
   };
-  console.log(userData);
   submitFormHandler(userData);
   emailInput.value = "";
   messageText.value = "";
