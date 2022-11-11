@@ -38,9 +38,50 @@ nav {
   list-style: none;
   /* border: 1px solid red; */
   display: inline-flex;
+  /* display: none; */
   margin-right: 5%;
   font-size: 1.2rem;
 }
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 4;
+  position: absolute;
+  left: 93%;
+  top: 1rem;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hamburger {
+  display: block;
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
 a {
   color: white;
   text-decoration: none;
@@ -1333,4 +1374,28 @@ a {
   width: 100% !important;
   left: 0% !important;
   text-align: center;
+}
+
+.thanks-message {
+  color: black;
+  font-family: "Inter";
+  position: absolute;
+  top: 13rem;
+  z-index: 10;
+  width: 100% !important;
+  left: 0% !important;
+  text-align: center;
+}
+
+.fadeOut {
+  animation: fadeOut 1s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }

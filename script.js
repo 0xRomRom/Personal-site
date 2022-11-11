@@ -294,6 +294,7 @@ const submitFormButton = document.querySelector(".submit-contact");
 const messageText = document.querySelector(".contact-input");
 const emailInput = document.querySelector(".email-input");
 const pleaseMessage = document.querySelector(".please-message");
+const thanksMessage = document.querySelector(".thanks-message");
 
 submitFormButton.addEventListener("click", () => {
   if (messageText.value.length === 0) {
@@ -308,6 +309,45 @@ submitFormButton.addEventListener("click", () => {
     message: messageText.value,
   };
   console.log(userData);
+  submitFormHandler(userData);
+  emailInput.value = "";
+  messageText.value = "";
+  thanksMessage.classList.remove("hidden");
+
+  setTimeout(() => {
+    thanksMessage.classList.add("hidden");
+  }, 2500);
+
+  setTimeout(() => {
+    dropshadow.classList.add("fadeOut");
+    contactModal.classList.add("fadeOut");
+    centerModal.classList.add("fadeOut");
+  }, 3000);
+  setTimeout(() => {
+    dropshadow.classList.add("hidden");
+    contactModal.classList.add("hidden");
+    centerModal.classList.add("hidden");
+    dropshadow.classList.remove("fadeOut");
+    contactModal.classList.remove("fadeOut");
+    centerModal.classList.remove("fadeOut");
+  }, 4000);
 });
 
-const submitFormHandler = () => {};
+const submitFormHandler = (userData) => {
+  fetch(
+    `https://personal-site-d781d-default-rtdb.europe-west1.firebasedatabase.app/messages.json`,
+    {
+      method: "POST",
+      body: JSON.stringify(userData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+};
+
+const burgerMenu = document.querySelector(".hamburger");
+
+burgerMenu.addEventListener("click", () => {
+  burgerMenu.classList.toggle("active");
+});
