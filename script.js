@@ -346,7 +346,17 @@ const submitFormHandler = (userData) => {
 };
 
 const burgerMenu = document.querySelector(".hamburger");
+const navbar = document.querySelector(".navlist");
+
+const navlinks = document.querySelectorAll(".nav-li");
+
+navlinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navbar.style.display = "none";
+  });
+});
 
 burgerMenu.addEventListener("click", () => {
   burgerMenu.classList.toggle("active");
+  navbar.setAttribute("style", "display: flex !important");
 });
