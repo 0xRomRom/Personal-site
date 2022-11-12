@@ -104,6 +104,7 @@
     left: 0rem;
     top: 3rem;
   }
+  
   .blur-drop3 {
     left: 10%;
     top: 135rem;
@@ -210,6 +211,13 @@
     padding-left: 0.25rem;
   }
 }
+
+@media only screen and (min-width: 751px) {
+  .navlist {
+    display: inline-flex !important;
+  }
+}
+
 
 @media only screen and (max-width: 700px) {
   .skills-hero {

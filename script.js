@@ -350,41 +350,14 @@ const navbar = document.querySelector(".navlist");
 const navlinks = document.querySelectorAll(".nav-li");
 
 
-let mobile = false;
-
-setInterval(() => {
-  let screenWidth = screen.width;
-      if (screenWidth > 750) {
-    navbar.setAttribute("style", "display: inline-flex !important");
-    mobile = false;
-  }
-
-  if (!mobile) {
-    
-if (screenWidth < 750) {
-    navbar.setAttribute("style", "display: none !important");
-  }
-
-  }
-  
-  
-
-}, 1000)
-
-
 navlinks.forEach((link) => {
   link.addEventListener("click", () => {
-    let screenWidth = screen.width;
-    if(+screenWidth < 749) {
       navbar.style.display = "none";
-      navbar.setAttribute("style", "display: none !important");
-    }
   });
 });
 
 
 burgerMenu.addEventListener("click", () => {
-  mobile = true;
   burgerMenu.classList.toggle("active");
   navbar.setAttribute("style", "display: flex !important");
 });
