@@ -347,14 +347,32 @@ const submitFormHandler = (userData) => {
 
 const burgerMenu = document.querySelector(".hamburger");
 const navbar = document.querySelector(".navlist");
-
 const navlinks = document.querySelectorAll(".nav-li");
+
+
+let mobile = false;
+
+setInterval(() => {
+  let screenWidth = screen.width;
+      if (screenWidth > 750) {
+    navbar.setAttribute("style", "display: inline-flex !important");
+  }
+  
+
+}, 1000)
+
 
 navlinks.forEach((link) => {
   link.addEventListener("click", () => {
-    navbar.style.display = "none";
+    let screenWidth = screen.width;
+    if(+screenWidth < 749) {
+      mobile = true;
+      navbar.style.display = "none";
+      navbar.setAttribute("style", "display: none !important");
+    }
   });
 });
+
 
 burgerMenu.addEventListener("click", () => {
   burgerMenu.classList.toggle("active");

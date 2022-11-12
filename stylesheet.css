@@ -138,7 +138,7 @@ a {
   width: 800px;
   height: 800px;
   background-color: rgb(45, 184, 215);
-  opacity: 0.05;
+  opacity: 0.15;
   border-radius: 20rem;
   filter: blur(50px);
 }
@@ -150,19 +150,19 @@ a {
   width: 800px;
   height: 800px;
   background-color: rgb(45, 184, 215);
-  opacity: 0.05;
+  opacity: 0.15;
   border-radius: 20rem;
   filter: blur(50px);
 }
 
 .blur-drop3 {
   position: absolute;
-  left: 30%;
+  left: 25%;
   top: 135rem;
   width: 800px;
   height: 800px;
   background-color: rgb(45, 184, 215);
-  opacity: 0.05;
+  opacity: 0.15;
   border-radius: 20rem;
   filter: blur(50px);
 }
@@ -174,7 +174,7 @@ a {
   width: 800px;
   height: 800px;
   background-color: rgb(45, 184, 215);
-  opacity: 0.05;
+  opacity: 0.15;
   border-radius: 20rem;
   filter: blur(50px);
 }
