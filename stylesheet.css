@@ -982,11 +982,12 @@ a {
 .project-desc-text {
   color: white;
   font-family: "Inter";
+  width: 95%;
 }
 
 .mobile-buttons {
   position: relative;
-  width: 100%;
+  width: 95%;
   height: 5rem;
   /* border: 1px solid cyan; */
   display: flex;
