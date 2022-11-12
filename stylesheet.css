@@ -22,7 +22,7 @@ nav {
   width: 100%;
   height: 4rem;
   background-color: black;
-  z-index: 400;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   transition: top 0.3s;
@@ -470,8 +470,6 @@ a {
   background-color: black;
   width: 100%;
   height: 63rem;
-  border-top: 1px solid red;
-  border-bottom: 1px solid red;
 }
 
 .skills-inner {
@@ -759,7 +757,6 @@ a {
   background-color: black;
   width: 100%;
   height: 63rem;
-  /* border-bottom: 1px solid red; */
   overflow: hidden;
 }
 
@@ -1159,7 +1156,6 @@ a {
   width: 100%;
   height: 63rem;
   background-color: black;
-  /* border-top: 1px solid white; */
   overflow: hidden;
 }
 
@@ -1169,7 +1165,9 @@ a {
   left: 10vw;
   top: 10rem;
   height: 50rem;
-  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .about-herotext {
@@ -1180,18 +1178,20 @@ a {
 
 .about-subtextbox {
   position: relative;
-  width: 40%;
-  left: 30%;
-  height: 43rem;
-  top: 2rem;
-  /* border: 1px solid red; */
+  width: 100%;
+  /* left: 30%; */
+  height: 41rem;
+  top: 0rem;
+  display: flex;
+  justify-content: center;
 }
 
 .about-subtext {
   color: white;
   font-family: "Inter";
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   display: block;
+  width: 60%;
 }
 
 .hover-bg {
@@ -1224,13 +1224,12 @@ a {
 }
 
 .to-top-box {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 3rem;
-  top: 60rem;
-  /* background-color: green; */
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  z-index: 10;
 }
 
 .to-about-box {
@@ -1401,4 +1400,8 @@ a {
   to {
     opacity: 0;
   }
+}
+
+.top-href {
+  width: 1.5rem;
 }

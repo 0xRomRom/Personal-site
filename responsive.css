@@ -8,9 +8,6 @@
   .brack1 {
     left: -5rem;
   }
-  .about-subtextbox {
-    width: 60%;
-  }
 }
 
 @media only screen and (max-width: 1150px) {
@@ -20,9 +17,11 @@
   .brack1 {
     left: 2rem;
   }
-  .about-subtextbox {
-    width: 90%;
-    left: 0%;
+}
+
+@media only screen and (max-width: 1100px) {
+  .about-subtext {
+    font-size: 1.1rem;
   }
 }
 
@@ -30,12 +29,11 @@
   .blur-drop1 {
     left: -20rem;
   }
-
   .skills-inner {
     position: relative;
     width: 100%;
     height: 30rem;
-    top: 5rem;
+    top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -106,6 +104,25 @@
     left: 0rem;
     top: 3rem;
   }
+  .blur-drop1 {
+    opacity: 0.1;
+  }
+  .blur-drop3 {
+    opacity: 0.1;
+    left: 10%;
+    top: 135rem;
+  }
+  .blur-drop4 {
+    opacity: 0.1;
+  }
+  .blur-drop2 {
+    position: absolute;
+    left: 60%;
+    top: 60rem;
+    width: 800px;
+    height: 800px;
+    opacity: 0.1;
+  }
 }
 
 @media only screen and (max-width: 950px) {
@@ -172,7 +189,6 @@
     font-size: 1rem;
   }
   .about-subtextbox {
-    border: 1px solid white;
     height: auto;
   }
 }
@@ -199,8 +215,6 @@
     background-color: black;
     width: 100%;
     height: 50rem;
-    border-top: 1px solid red;
-    border-bottom: 1px solid red;
   }
   .cta-box2 {
     top: 8rem;
@@ -208,11 +222,23 @@
   .icon-img {
     transform: scale(0.8) !important;
   }
+  .blur-drop3 {
+    opacity: 0.1;
+    left: 10%;
+    top: 115rem;
+  }
+  .about-subtext {
+    /* font-size: 1.1rem; */
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   .blur-drop1 {
     left: -30rem;
+  }
+  .about-innerbox {
+    top: 5rem;
   }
 }
 
@@ -225,6 +251,12 @@
   }
   .icon-img {
     transform: scale(0.7) !important;
+  }
+  .skills-herotext {
+    padding-bottom: 1rem;
+  }
+  .list-container {
+    padding-top: 1.5rem;
   }
 }
 
@@ -266,6 +298,31 @@
     left: 0rem;
     top: 0rem;
   }
+  .aboutme {
+    height: 55rem;
+  }
+  .to-top-box {
+    top: 50rem;
+  }
+  .title-box {
+    position: relative;
+    width: 100%;
+    top: 5rem;
+    z-index: 300;
+  }
+  .project-outer-modal {
+    top: -1rem;
+  }
+  .buttonbox {
+    top: 37rem;
+  }
+
+  .about-innerbox {
+    gap: 0;
+  }
+  .to-top-box {
+    top: 1rem;
+  }
 }
 
 @media only screen and (max-width: 450px) {
@@ -279,12 +336,6 @@
   .about-subtext {
     font-size: 0.9rem;
   }
-  .about-subtextbox {
-    border: 1px solid white;
-    height: auto;
-    width: 90%;
-    left: 5%;
-  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -296,6 +347,9 @@
   .list-container {
     position: relative;
     left: -7%;
+  }
+  .project-outer-modal {
+    transform: scale(0.9);
   }
 }
 
@@ -310,5 +364,19 @@
   }
   .social {
     font-size: 1.5rem;
+  }
+  .skills-list-left {
+    left: -3rem;
+    font-size: 1.1rem;
+  }
+  .skills-list-right {
+    left: -3rem;
+    font-size: 1.1rem;
+  }
+  .blur-drop3 {
+    opacity: 0.1;
+    left: 10%;
+    top: 120rem;
+    transform: scale(1.3);
   }
 }
