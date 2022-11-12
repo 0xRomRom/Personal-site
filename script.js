@@ -356,7 +356,17 @@ setInterval(() => {
   let screenWidth = screen.width;
       if (screenWidth > 750) {
     navbar.setAttribute("style", "display: inline-flex !important");
+    mobile = false;
   }
+
+  if (!mobile) {
+    
+if (screenWidth < 750) {
+    navbar.setAttribute("style", "display: none !important");
+  }
+
+  }
+  
   
 
 }, 1000)
@@ -366,7 +376,6 @@ navlinks.forEach((link) => {
   link.addEventListener("click", () => {
     let screenWidth = screen.width;
     if(+screenWidth < 749) {
-      mobile = true;
       navbar.style.display = "none";
       navbar.setAttribute("style", "display: none !important");
     }
@@ -375,6 +384,7 @@ navlinks.forEach((link) => {
 
 
 burgerMenu.addEventListener("click", () => {
+  mobile = true;
   burgerMenu.classList.toggle("active");
   navbar.setAttribute("style", "display: flex !important");
 });

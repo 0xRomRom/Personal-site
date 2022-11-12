@@ -1200,13 +1200,13 @@ a {
 
 @keyframes hoverbg {
   0% {
-    transform: translateX(1rem);
+    transform: translateX(2rem);
   }
   50% {
-    transform: translateX(-1rem);
+    transform: translateX(-2rem);
   }
   100% {
-    transform: translateX(1rem);
+    transform: translateX(2rem);
   }
 }
 
@@ -1267,6 +1267,7 @@ a {
   height: 30rem;
   background-color: rgb(15, 17, 63);
   border-radius: 1rem;
+  z-index: 1000 !important;
 }
 
 .center-modal {
@@ -1276,7 +1277,7 @@ a {
   height: 30rem;
   display: flex;
   justify-content: center;
-  z-index: 400;
+  z-index: 510 !important;
 }
 
 .fa-circle-xmark {
