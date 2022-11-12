@@ -1335,6 +1335,10 @@ a {
   border: none;
 }
 
+.email-label {
+  padding-bottom: 0.5rem;
+}
+
 .email-inputbox {
   position: absolute;
   width: 100%;
