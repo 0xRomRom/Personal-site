@@ -1420,7 +1420,7 @@ a {
 }
 
 .fa-xmark {
-  display: flex !important;
+  display: none !important;
   position: fixed;
   top: 1rem;
   width: 100%;
