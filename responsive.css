@@ -47,27 +47,27 @@
   .icon12 {
     position: absolute;
     left: 86%;
-    top: -22rem;
+    top: -21rem;
   }
   .icon5 {
     position: absolute;
     left: 87%;
-    top: -6rem;
+    top: -4rem;
   }
   .icon9 {
     position: absolute;
     left: 86%;
-    top: -33rem;
+    top: -31rem;
   }
   .icon10 {
     position: absolute;
     left: 86%;
-    top: -18rem;
+    top: -16rem;
   }
   .icon4 {
     position: absolute;
     left: 86%;
-    top: -7rem;
+    top: -5rem;
   }
   .icon3 {
     position: absolute;
@@ -92,19 +92,19 @@
   .icon11 {
     position: absolute;
     left: 2rem;
-    top: -21rem;
+    top: -22rem;
   }
   .icon13 {
     position: absolute;
     left: 85%;
-    top: -35rem;
+    top: -33rem;
   }
   .icon1 {
     position: absolute;
     left: 0rem;
     top: 3rem;
   }
-  
+
   .blur-drop3 {
     left: 10%;
     top: 135rem;
@@ -216,9 +216,7 @@
   .navlist {
     display: inline-flex !important;
   }
-
 }
-
 
 @media only screen and (max-width: 700px) {
   .skills-hero {
