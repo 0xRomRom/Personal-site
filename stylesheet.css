@@ -34,7 +34,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
+  gap: 3rem;
   list-style: none;
   /* border: 1px solid red; */
   display: inline-flex;
@@ -286,6 +286,10 @@ a {
 
 .face:hover {
   opacity: 0.5;
+}
+
+.top {
+  font-size: 0.9rem;
 }
 
 .front {
@@ -602,10 +606,10 @@ a {
 }
 
 .iconstyle {
-  display: inline-block;
   padding: 0.5rem;
   border-radius: 4rem;
   z-index: 100 !important;
+  display: inline-block !important;
 }
 
 .icon-img {
